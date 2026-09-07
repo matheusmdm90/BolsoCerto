@@ -1,33 +1,36 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import MaterialIcons from "@react-native-vector-icons/material-icons";
+import { Tabs } from "expo-router";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: "blue", headerShown: false }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "none",
+
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons size={28} name="home" color={color} />
+          ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="settings"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: "Settings",
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons size={28} name="settings" color={color} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="transacoes"
+        options={{
+          title: "Transações",
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons size={28} name="currency-exchange" color={color} />
+          ),
         }}
       />
     </Tabs>
