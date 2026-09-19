@@ -43,6 +43,16 @@ export default function TabLayout() {
           ),
         }}
       />
+
+      <Tabs.Screen
+        name="metas"
+        options={{
+          title: "Metas",
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons size={28} name="flag" color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
