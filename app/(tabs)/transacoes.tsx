@@ -51,7 +51,7 @@ const Transacoes = () => {
           </Pressable>
         ))}
       </View>
-      <View style={{ height: "85%" }}>
+      <View style={{ height: "90%" }}>
         <FlatListTransacoes opcao={selecionado} />
       </View>
     </SafeAreaView>
