@@ -1,7 +1,7 @@
 import { color } from "@/assets/color";
 import GraficoCircular from "@/src/Components/GraficoCircular";
 import Header from "@/src/Components/Heades";
-import OpcaoTransacoes from "@/src/Components/OpcaoTransacoes/indez";
+import OpcaoTransacoes from "@/src/Components/OpcaoTransacoes";
 import { StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 

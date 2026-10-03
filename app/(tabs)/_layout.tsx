@@ -14,15 +14,6 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="settings"
-        options={{
-          title: "Settings",
-          tabBarIcon: ({ color }) => (
-            <MaterialIcons size={28} name="settings" color={color} />
-          ),
-        }}
-      />
 
       <Tabs.Screen
         name="transacoes"
@@ -30,6 +21,14 @@ export default function TabLayout() {
           title: "Transações",
           tabBarIcon: ({ color }) => (
             <MaterialIcons size={28} name="currency-exchange" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="adicionar"
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons size={28} name="add-circle" color={color} />
           ),
         }}
       />
