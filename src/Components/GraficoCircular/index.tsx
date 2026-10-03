@@ -1,6 +1,7 @@
 import { CORES_CATEGORIA } from "@/assets/color";
 import { dataGasto } from "@/src/data/dataGasto";
 
+import { totalFormatado } from "@/src/utils/FormatarMoeda";
 import { StyleSheet, Text, View } from "react-native";
 import { PieChart } from "react-native-gifted-charts";
 import Graficocirculardescricao from "../GraficoCircularDescricao";
@@ -32,7 +33,7 @@ const GraficoCircular = () => {
           return (
             <View style={styles.pieChartbox}>
               <Text style={styles.pieChartText1}>Total</Text>
-              <Text style={styles.pieChartText2}>R$4.520,63</Text>
+              <Text style={styles.pieChartText2}>{totalFormatado(total)}</Text>
             </View>
           );
         }}

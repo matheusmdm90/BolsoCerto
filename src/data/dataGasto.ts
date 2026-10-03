@@ -15,6 +15,11 @@ export const dataGasto = [
     valor: 1050.63,
   },
   {
+    id: 5,
+    nome: "Despesa Fixa",
+    valor: 680.5,
+  },
+  {
     id: 4,
     nome: "Outros",
     valor: 150.5,
