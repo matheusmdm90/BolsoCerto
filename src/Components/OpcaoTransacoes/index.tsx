@@ -2,15 +2,25 @@ import { color } from "@/assets/color";
 import { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-const OpcaoTransacoes = () => {
+type Props = {
+  transacao: (dados: number) => void;
+};
+
+const OpcaoTransacoes = ({ transacao }: Props) => {
   const [selecionado, setSelecionado] = useState("0");
+
+  const Onpress = (dados: string) => {
+    transacao(Number(dados));
+    setSelecionado(dados);
+  };
+
   return (
     <View style={styles.box}>
       <Pressable
         style={
           selecionado === "0" ? styles.btnDespesa : styles.btnNaoSelecionado
         }
-        onPress={() => setSelecionado("0")}
+        onPress={() => Onpress("0")}
       >
         <Text
           style={
@@ -26,7 +36,7 @@ const OpcaoTransacoes = () => {
         style={
           selecionado === "1" ? styles.btnReceita : styles.btnNaoSelecionado
         }
-        onPress={() => setSelecionado("1")}
+        onPress={() => Onpress("1")}
       >
         <Text
           style={
